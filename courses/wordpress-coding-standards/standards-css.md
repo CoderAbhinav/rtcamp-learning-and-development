@@ -35,7 +35,7 @@ input[type="text"] {
 ## Properties
 1. Properties should be followed by a `colon` and a `space`.
 2. All properties and values should be `lowercase`, except for font names and vendor-specific properties.
-3. Use hex code for colors, or `rgba()` if **opacity** is needed. Avoid RGB format and uppercase, and shorten values when possible: #fff instead of #FFFFFF.
+3. Use hex code for colors, or `rgba()` if **opacity** is needed. Avoid RGB format and uppercase, and shorten values when possible: ##fff instead of ##FFFFFF.
 4. Use shorthand, except when overriding styles, for background, border, font, list-style, margin, and padding values as much as possible.
 5. Group like properties together.
 
