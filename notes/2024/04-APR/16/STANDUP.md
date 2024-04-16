@@ -21,15 +21,15 @@
 	2. JSX attributes
 
 # Today
-1. `QnA`: Advance WordPress Theme Development (Scheduled for 16th APR)
+1. `QnA`: Advance WordPress Theme Development (Scheduled for 16th APR) ✅
 	-  Decoupled
 	- GraphQL example queries
 	- React & NextJS
         - React state management
         - NextJS routing
 	- Memory maps
-2. `Course`: Basic React
-	- React Components
+2. `Course`: Basic React 
+	- React Components 
 	- State & Lifecycle
 	- States
 	- Component Lifecycle
