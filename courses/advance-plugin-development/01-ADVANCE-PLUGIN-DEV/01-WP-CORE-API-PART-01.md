@@ -1,8 +1,8 @@
 # WP Core API (Part 1)
 
 ## HTTP
-1. **HTTP** stands for *Hyper Text Transfer Protocol*
-2. **HTTP Methods**
+### 1. **HTTP** stands for *Hyper Text Transfer Protocol*
+### 2. **HTTP Methods**
     - **GET** is used to retrieve data.
     - **POST** is used to send data to the server for the server to act upon in some way.
     - **HEAD** is essentially the same as a GET request except that it does not retrieve the data, only information about the data.
@@ -25,7 +25,7 @@
     500|	Internal server error
     503|	Service unavailable
 
-<a name="http\get">
+
 ### GETting Data From API
 In order to understand the usage of `GET` we need to understand the function `wp_remote_get()`
 
@@ -86,7 +86,26 @@ $response = wp_remote_get( 'https://api.github.com/users/blobaugh', $args );
 		[x-content-type-options] => nosniff
 		[x-ratelimit-limit] => 5000
 	)
-	[body] => {"type":"User","login":"blobaugh","gravatar_id":"f25f324a47a1efdf7a745e0b2e3c878f","public_gists":1,"followers":22,"created_at":"2011-05-23T21:38:50Z","public_repos":31,"email":"ben@lobaugh.net","hireable":true,"blog":"http://ben.lobaugh.net","bio":null,"following":30,"name":"Ben Lobaugh","company":null,"avatar_url":"https://secure.gravatar.com/avatar/f25f324a47a1efdf7a745e0b2e3c878f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png","id":806179,"html_url":"https://github.com/blobaugh","location":null,"url":"https://api.github.com/users/blobaugh"}
+	[body] => { 
+		"type":"User",
+		"login":"blobaugh",  
+		"gravatar_id":"f25f324a47a1efdf7a745e0b2e3c878f", "public_gists":1,
+		"followers":22,
+		"created_at":"2011-05-23T21:38:50Z",
+		"public_repos":31,
+		"email":"ben@lobaugh.net",
+		"hireable":true,
+		"blog":"http://ben.lobaugh.net",
+		"bio":null,
+		"following":30,
+		"name":"Ben Lobaugh",
+		"company":null,
+		"avatar_url":"https://secure.gravatar.com/avatar/f25f324a47a1efdf7a745e0b2e3c878f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+		"id":806179,
+		"html_url":"https://github.com/blobaugh",
+		"location":null,
+		"url":"https://api.github.com/users/blobaugh"
+	}
 	[response] => Array(
 		[preserved_text 5237511b45884ac6db1ff9d7e407f225 /] => 200
 		[message] => OK

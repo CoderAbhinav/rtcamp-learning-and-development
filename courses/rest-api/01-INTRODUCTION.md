@@ -8,10 +8,10 @@
 In the context of the WordPress REST API a route is a URI which can be mapped to different HTTP methods. The mapping of an individual HTTP method to a route is known as an endpoint.
 
 ## Request
-A REST API request is represented within WordPress by an instance of the `WP_REST_Request` class, which is used to store and retrieve information for the current request.
+A REST API request is represented within WordPress by an instance of the **`WP_REST_Request`** class, which is used to store and retrieve information for the current request.
 
 ## Response
-Responses are the data you get back from the API. The `WP_REST_Response` class provides a way to interact with the response data returned by endpoints.
+Responses are the data you get back from the API. The **`WP_REST_Response`** class provides a way to interact with the response data returned by endpoints.
 
 ## Schema
 The schema structures API data and provides a comprehensive list of all of the properties the API can return and which input parameters it can accept. 

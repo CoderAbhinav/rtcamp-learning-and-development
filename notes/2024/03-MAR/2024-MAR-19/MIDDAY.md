@@ -31,4 +31,3 @@ In a multisite setup, WordPress uses additional tables to manage network-wide fu
 - `wp_site`: Stores information about the network itself, including its domain and site-specific options.
 - `wp_registration_log`: Stores information about user registrations across the network.
 - `wp_signups`: Stores information about pending site registrations.
-- `wp_sitecategories` : Stores categories for sites within the network.

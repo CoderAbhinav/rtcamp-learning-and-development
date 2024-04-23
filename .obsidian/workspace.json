@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "b48f19709057ecbf",
+        "id": "f99bdb3bfbcc3ab8",
         "type": "tabs",
         "children": [
           {
-            "id": "5b4ab76bdaf8badd",
+            "id": "728dcfa3c87015da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/2024/04-APR/23/STANDUP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c0d0656cc786eb3a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -16,43 +28,18 @@
             }
           },
           {
-            "id": "763d3956967ec252",
+            "id": "aabc43e7196e1f21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/04-APR/17/STANDUP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4cc538da4a85a2d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "courses/basic-wordpress-plugin-development.md/2.1.1-metadata-api.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0e67b2b715e1fc13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/04-APR/16/STANDUP.md",
+                "file": "courses/advance-wordpress-theme-development/2.3-react-and-next.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.5024719238281
+    "width": 347.5024719238281
   },
   "right": {
     "id": "c9426dcdab66367d",
@@ -118,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/basic-wordpress-plugin-development.md/2.1.1-metadata-api.md",
+                "file": "notes/2024/04-APR/23/STANDUP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/basic-wordpress-plugin-development.md/2.1.1-metadata-api.md",
+                "file": "notes/2024/04-APR/23/STANDUP.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/basic-wordpress-plugin-development.md/2.1.1-metadata-api.md"
+                "file": "notes/2024/04-APR/23/STANDUP.md"
               }
             }
           }
@@ -167,7 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 351.5
+    "width": 353.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,38 +166,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4cc538da4a85a2d7",
+  "active": "728dcfa3c87015da",
   "lastOpenFiles": [
-    "notes/2024/04-APR/17/STANDUP.md",
-    "notes/2024/04-APR/16/STANDUP.md",
-    "courses/basic-wordpress-plugin-development.md/2.1.1-metadata-api.md",
-    "notes/2024/04-APR/17",
-    "courses/basic-wordpress-plugin-development.md/1.3.1-custom-post-types-and-taxonomies.md",
-    "courses/basic-wordpress-plugin-development.md/1.2.1-hooks-wordpress-actions-and-filter.md",
-    "courses/basic-wordpress-plugin-development.md/1.1.1-plugin-development-introduction.md",
-    "courses/basic-wordpress-plugin-development.md/1.1.2-plugin-security.md",
-    "courses/basic-react/2.3-states.md",
-    "courses/basic-react/2.2-react-componets.md",
-    "courses/Untitled.md",
-    "courses/Untitled",
-    "courses/advance-wordpress-theme-development/2.3-react-and-next.md",
-    "notes/2024/04-APR/16/MIDDAY.md",
-    "notes/2024/04-APR/09/MIDDAY.md",
-    "notes/2024/04-APR/08/MIDDAY.md",
-    "courses/advance-wordpress-theme-development/1.2-asset-building-using-webpack-and-babel.md",
-    "courses/advance-wordpress-theme-development/2.1-decoupled.md",
-    "courses/advance-wordpress-theme-development/2.2-graphql.md",
-    "courses/advance-wordpress-theme-development/1.3-how-wordpress-works.md",
-    "courses/advance-wordpress-theme-development/2.4-accessibility.md",
-    "courses/advance-wordpress-theme-development/1.1-customizer-api.md",
-    "notes/2024/04-APR/15/MIDDAY.md",
-    "courses/advance-wordpress-theme-development/ultimate-revision.md",
-    "notes/2024/04-APR/05/MIDDAY.md",
-    "notes/2024/04-APR/05/STANDUP.md",
-    "notes/2024/04-APR/10/MIDDAY.md",
-    "notes/2024/04-APR/11/MIDDAY.md",
-    "notes/2024/04-APR/16",
     "Untitled.canvas",
-    "courses/basic-react"
+    "notes/2024/04-APR/23/STANDUP.md",
+    "courses/basic-react/1.0-introduction-to-JSX.md",
+    "notes/2024/04-APR/23/MIDDAY.md",
+    "courses/advance-wordpress-theme-development/2.3-react-and-next.md",
+    "courses/basic-react/2.0-react-componets.md",
+    "courses/advance-wordpress-theme-development/2.2-graphql.md",
+    "courses/advance-wordpress-theme-development/1.2-asset-building-using-webpack-and-babel.md",
+    "courses/advance-wordpress-theme-development/1.3-how-wordpress-works.md",
+    "notes/2024/04-APR/16/MIDDAY.md",
+    "notes/2024/04-APR/15/MIDDAY.md",
+    "notes/2024/04-APR/11/MIDDAY.md",
+    "2024-04-23.md",
+    "notes/2024/04-APR/22/STANDUP.md",
+    "notes/2024/04-APR/23",
+    "assignment/create-react-todo-app/FRD.md",
+    "assignment/create-react-todo-app/COMMITS.md",
+    "notes/2024/04-APR/22/MIDDAY.md",
+    "notes/2024/04-APR/22/Screenshot 2024-04-22 at 6.09.27 PM.png",
+    "notes/2024/04-APR/19/MIDDAY.md",
+    "notes/2024/04-APR/19/STANDUP.md",
+    "notes/2024/04-APR/22",
+    "assignment/create-react-todo-app/TIMELINE.md",
+    "courses/advance-wordpress-theme-development/2.1-decoupled.md",
+    "courses/advance-wordpress-theme-development/ultimate-revision.md",
+    "courses/advance-wordpress-theme-development/1.1-customizer-api.md",
+    "notes/2024/03-MAR/2024-MAR-25/MIDDAY.md",
+    "notes/2024/03-MAR/2024-MAR-22/MIDDAY.md",
+    "notes/2024/03-MAR/2024-MAR-21/MIDDAY.md",
+    "notes/2024/04-APR/19",
+    "notes/2024/04-APR/18",
+    "assignment/create-react-todo-app",
+    "Untitled",
+    "assignment",
+    "courses/basic-react/Untitled",
+    "notes/2024/04-APR/17",
+    "courses/Untitled"
   ]
 }
