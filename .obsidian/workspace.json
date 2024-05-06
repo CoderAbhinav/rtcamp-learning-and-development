@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/block-editor/2.0-basic-(static)-block.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8160a8a1acf75015",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/2024/05-MAY/03/STANDUP.md",
+                "file": "courses/block-editor/7.0-nested-blocks.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/block-editor/2.0-basic-(static)-block.md",
+                "file": "courses/block-editor/7.0-nested-blocks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/block-editor/2.0-basic-(static)-block.md",
+                "file": "courses/block-editor/7.0-nested-blocks.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/block-editor/2.0-basic-(static)-block.md"
+                "file": "courses/block-editor/7.0-nested-blocks.md"
               }
             }
           }
@@ -158,34 +146,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fccaf55f0ade6467",
+  "active": "637f6a3e0f850d15",
   "lastOpenFiles": [
+    "courses/block-editor/6.0-block-controls.md",
+    "courses/block-editor/7.0-nested-blocks.md",
+    "courses/block-editor/2.0-basic-(static)-block.md",
+    "courses/block-editor/assets/Pasted image 20240506195713.png",
+    "courses/block-editor/5.0-block-attributes-and-editable-fields.md",
+    "courses/block-editor/4.0-block-supports.md",
+    "courses/block-editor/3.0-creating-dynamic-blocks.md",
     "courses/block-editor/1.0-creating-a-block.md",
-    "courses/block-editor/0.0-introduction.md",
+    "notes/2024/04-APR/29/MIDDAY.md",
     "notes/2024/04-APR/26/MIDDAY.md",
+    "notes/2024/05-MAY/03/STANDUP.md",
+    "courses/block-editor/0.0-introduction.md",
     "notes/2024/04-APR/25/MIDDAY.md",
     "notes/2024/04-APR/24/MIDDAY.md",
     "notes/2024/04-APR/23/MIDDAY.md",
     "notes/2024/05-MAY/03/MIDDAY.md",
     "notes/2024/05-MAY/06/STANDUP.md",
-    "notes/2024/05-MAY/03/STANDUP.md",
     "assignment/block-editor-21/commits.md",
     "notes/2024/05-MAY/06",
     "assignment/block-editor-21",
     "notes/2024/05-MAY/02/STANDUP.md",
     "notes/2024/05-MAY/03",
-    "courses/block-editor/6.0-block-attributes-and-editable-fields.md",
     "notes/2024/05-MAY/02/MIDDAY.md",
     "notes/2024/04-APR/30/STANDUP.md",
     "notes/2024/05-MAY/Untitled.md",
     "notes/2024/05-MAY/02",
     "notes/2024/05-MAY",
     "notes/2024/04-APR/30/MIDDAY.md",
-    "courses/block-editor/2.0-basic-(static)-block.md",
     "notes/2024/04-APR/29/STANDUP.md",
     "courses/block-editor/udemy/1.5..md",
     "courses/block-editor/udemy",
-    "notes/2024/04-APR/29/MIDDAY.md",
     "notes/2024/04-APR/30",
     "notes/2024/04-APR/26/STANDUP.md",
     "notes/2024/04-APR/29",
@@ -198,14 +191,9 @@
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.18.12 PM.png",
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.10.57 PM.png",
     "courses/block-editor/assets/Pasted image 20240426143346.png",
-    "courses/block-editor/assets/Pasted image 20240426142703.png",
     "courses/block-editor/assets",
     "notes/2024/04-APR/25/STANDUP.md",
     "notes/2024/04-APR/26",
-    "notes/2024/04-APR/24/STANDUP.md",
-    "notes/2024/04-APR/23/STANDUP.md",
-    "notes/2024/04-APR/17/MIDDAY.md",
-    "notes/2024/04-APR/16/STANDUP.md",
     "Untitled.canvas"
   ]
 }
