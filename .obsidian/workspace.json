@@ -4,17 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "b96d4d37db6a29c0",
+        "id": "22fd33e1793e0ba5",
         "type": "tabs",
         "children": [
           {
-            "id": "637f6a3e0f850d15",
+            "id": "d3f390243ecdf9ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/block-editor/7.0-nested-blocks.md",
-                "mode": "source",
+                "file": "notes/2024/05-MAY/06/MIDDAY.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7de892c73c0aeb89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "courses/block-editor/1.0.0-introduction.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/block-editor/7.0-nested-blocks.md",
+                "file": "notes/2024/05-MAY/06/MIDDAY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/block-editor/7.0-nested-blocks.md",
+                "file": "notes/2024/05-MAY/06/MIDDAY.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/block-editor/7.0-nested-blocks.md"
+                "file": "notes/2024/05-MAY/06/MIDDAY.md"
               }
             }
           }
@@ -146,41 +158,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "637f6a3e0f850d15",
+  "active": "d3f390243ecdf9ab",
   "lastOpenFiles": [
-    "courses/block-editor/6.0-block-controls.md",
-    "courses/block-editor/7.0-nested-blocks.md",
-    "courses/block-editor/2.0-basic-(static)-block.md",
-    "courses/block-editor/assets/Pasted image 20240506195713.png",
-    "courses/block-editor/5.0-block-attributes-and-editable-fields.md",
-    "courses/block-editor/4.0-block-supports.md",
-    "courses/block-editor/3.0-creating-dynamic-blocks.md",
-    "courses/block-editor/1.0-creating-a-block.md",
+    "notes/2024/05-MAY/03/MIDDAY.md",
+    "notes/2024/05-MAY/02/MIDDAY.md",
+    "notes/2024/04-APR/30/MIDDAY.md",
+    "courses/block-editor/1.0.0-introduction.md",
+    "courses/block-editor/1.7.0-nested-blocks.md",
     "notes/2024/04-APR/29/MIDDAY.md",
+    "courses/block-editor/1.6.0-block-controls.md",
+    "courses/block-editor/1.5.0-block-attributes-and-editable-fields.md",
+    "courses/block-editor/1.4.0-block-supports.md",
+    "courses/block-editor/1.3.0-creating-dynamic-blocks.md",
+    "courses/block-editor/1.8.0-block-api-reference.md",
     "notes/2024/04-APR/26/MIDDAY.md",
+    "courses/block-editor/2.5.0-slotfills.md",
+    "courses/block-editor/2.3.0-notices.md",
+    "Pasted image 20240506231716.png",
+    "Pasted image 20240506231355.png",
+    "courses/block-editor/2.1.0-meta-boxes.md",
+    "courses/block-editor/1.2.0-basic-(static)-block.md",
+    "courses/block-editor/1.1.0-creating-a-block.md",
+    "notes/2024/05-MAY/06/MIDDAY.md",
+    "[3.0-creating-dynamic-blocks.md",
+    "courses/block-editor/assets/Pasted image 20240506195713.png",
     "notes/2024/05-MAY/03/STANDUP.md",
-    "courses/block-editor/0.0-introduction.md",
     "notes/2024/04-APR/25/MIDDAY.md",
     "notes/2024/04-APR/24/MIDDAY.md",
     "notes/2024/04-APR/23/MIDDAY.md",
-    "notes/2024/05-MAY/03/MIDDAY.md",
     "notes/2024/05-MAY/06/STANDUP.md",
     "assignment/block-editor-21/commits.md",
     "notes/2024/05-MAY/06",
     "assignment/block-editor-21",
     "notes/2024/05-MAY/02/STANDUP.md",
     "notes/2024/05-MAY/03",
-    "notes/2024/05-MAY/02/MIDDAY.md",
-    "notes/2024/04-APR/30/STANDUP.md",
-    "notes/2024/05-MAY/Untitled.md",
     "notes/2024/05-MAY/02",
     "notes/2024/05-MAY",
-    "notes/2024/04-APR/30/MIDDAY.md",
-    "notes/2024/04-APR/29/STANDUP.md",
-    "courses/block-editor/udemy/1.5..md",
     "courses/block-editor/udemy",
     "notes/2024/04-APR/30",
-    "notes/2024/04-APR/26/STANDUP.md",
     "notes/2024/04-APR/29",
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.31.46 PM.png",
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.27.48 PM.png",
@@ -189,10 +204,7 @@
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.23.48 PM.png",
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.19.58 PM.png",
     "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.18.12 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.10.57 PM.png",
-    "courses/block-editor/assets/Pasted image 20240426143346.png",
     "courses/block-editor/assets",
-    "notes/2024/04-APR/25/STANDUP.md",
     "notes/2024/04-APR/26",
     "Untitled.canvas"
   ]
