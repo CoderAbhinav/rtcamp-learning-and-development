@@ -4,36 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "f99bdb3bfbcc3ab8",
+        "id": "b96d4d37db6a29c0",
         "type": "tabs",
         "children": [
           {
-            "id": "728dcfa3c87015da",
+            "id": "637f6a3e0f850d15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/04-APR/23/STANDUP.md",
-                "mode": "source",
+                "file": "courses/block-editor/2.0-basic-(static)-block.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "c0d0656cc786eb3a",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "aabc43e7196e1f21",
+            "id": "8160a8a1acf75015",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/advance-wordpress-theme-development/2.3-react-and-next.md",
+                "file": "notes/2024/05-MAY/03/STANDUP.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/2024/04-APR/23/STANDUP.md",
+                "file": "courses/block-editor/2.0-basic-(static)-block.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/2024/04-APR/23/STANDUP.md",
+                "file": "courses/block-editor/2.0-basic-(static)-block.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/2024/04-APR/23/STANDUP.md"
+                "file": "courses/block-editor/2.0-basic-(static)-block.md"
               }
             }
           }
@@ -166,44 +158,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "728dcfa3c87015da",
+  "active": "fccaf55f0ade6467",
   "lastOpenFiles": [
-    "Untitled.canvas",
-    "notes/2024/04-APR/23/STANDUP.md",
-    "courses/basic-react/1.0-introduction-to-JSX.md",
+    "courses/block-editor/1.0-creating-a-block.md",
+    "courses/block-editor/0.0-introduction.md",
+    "notes/2024/04-APR/26/MIDDAY.md",
+    "notes/2024/04-APR/25/MIDDAY.md",
+    "notes/2024/04-APR/24/MIDDAY.md",
     "notes/2024/04-APR/23/MIDDAY.md",
-    "courses/advance-wordpress-theme-development/2.3-react-and-next.md",
-    "courses/basic-react/2.0-react-componets.md",
-    "courses/advance-wordpress-theme-development/2.2-graphql.md",
-    "courses/advance-wordpress-theme-development/1.2-asset-building-using-webpack-and-babel.md",
-    "courses/advance-wordpress-theme-development/1.3-how-wordpress-works.md",
-    "notes/2024/04-APR/16/MIDDAY.md",
-    "notes/2024/04-APR/15/MIDDAY.md",
-    "notes/2024/04-APR/11/MIDDAY.md",
-    "2024-04-23.md",
-    "notes/2024/04-APR/22/STANDUP.md",
-    "notes/2024/04-APR/23",
-    "assignment/create-react-todo-app/FRD.md",
-    "assignment/create-react-todo-app/COMMITS.md",
-    "notes/2024/04-APR/22/MIDDAY.md",
-    "notes/2024/04-APR/22/Screenshot 2024-04-22 at 6.09.27 PM.png",
-    "notes/2024/04-APR/19/MIDDAY.md",
-    "notes/2024/04-APR/19/STANDUP.md",
-    "notes/2024/04-APR/22",
-    "assignment/create-react-todo-app/TIMELINE.md",
-    "courses/advance-wordpress-theme-development/2.1-decoupled.md",
-    "courses/advance-wordpress-theme-development/ultimate-revision.md",
-    "courses/advance-wordpress-theme-development/1.1-customizer-api.md",
-    "notes/2024/03-MAR/2024-MAR-25/MIDDAY.md",
-    "notes/2024/03-MAR/2024-MAR-22/MIDDAY.md",
-    "notes/2024/03-MAR/2024-MAR-21/MIDDAY.md",
-    "notes/2024/04-APR/19",
-    "notes/2024/04-APR/18",
-    "assignment/create-react-todo-app",
-    "Untitled",
-    "assignment",
-    "courses/basic-react/Untitled",
-    "notes/2024/04-APR/17",
-    "courses/Untitled"
+    "notes/2024/05-MAY/03/MIDDAY.md",
+    "notes/2024/05-MAY/06/STANDUP.md",
+    "notes/2024/05-MAY/03/STANDUP.md",
+    "assignment/block-editor-21/commits.md",
+    "notes/2024/05-MAY/06",
+    "assignment/block-editor-21",
+    "notes/2024/05-MAY/02/STANDUP.md",
+    "notes/2024/05-MAY/03",
+    "courses/block-editor/6.0-block-attributes-and-editable-fields.md",
+    "notes/2024/05-MAY/02/MIDDAY.md",
+    "notes/2024/04-APR/30/STANDUP.md",
+    "notes/2024/05-MAY/Untitled.md",
+    "notes/2024/05-MAY/02",
+    "notes/2024/05-MAY",
+    "notes/2024/04-APR/30/MIDDAY.md",
+    "courses/block-editor/2.0-basic-(static)-block.md",
+    "notes/2024/04-APR/29/STANDUP.md",
+    "courses/block-editor/udemy/1.5..md",
+    "courses/block-editor/udemy",
+    "notes/2024/04-APR/29/MIDDAY.md",
+    "notes/2024/04-APR/30",
+    "notes/2024/04-APR/26/STANDUP.md",
+    "notes/2024/04-APR/29",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.31.46 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.27.48 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.26.30 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.24.07 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.23.48 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.19.58 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.18.12 PM.png",
+    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.10.57 PM.png",
+    "courses/block-editor/assets/Pasted image 20240426143346.png",
+    "courses/block-editor/assets/Pasted image 20240426142703.png",
+    "courses/block-editor/assets",
+    "notes/2024/04-APR/25/STANDUP.md",
+    "notes/2024/04-APR/26",
+    "notes/2024/04-APR/24/STANDUP.md",
+    "notes/2024/04-APR/23/STANDUP.md",
+    "notes/2024/04-APR/17/MIDDAY.md",
+    "notes/2024/04-APR/16/STANDUP.md",
+    "Untitled.canvas"
   ]
 }
