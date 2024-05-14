@@ -4,29 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "22fd33e1793e0ba5",
+        "id": "f7e3cd51809e9c3e",
         "type": "tabs",
         "children": [
           {
-            "id": "d3f390243ecdf9ab",
+            "id": "983cda1c37ccfa29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/2024/05-MAY/06/MIDDAY.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7de892c73c0aeb89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "courses/block-editor/1.0.0-introduction.md",
-                "mode": "preview",
+                "file": "courses/rest-api/combined-notes.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/2024/05-MAY/06/MIDDAY.md",
+                "file": "courses/rest-api/combined-notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/2024/05-MAY/06/MIDDAY.md",
+                "file": "courses/rest-api/combined-notes.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/2024/05-MAY/06/MIDDAY.md"
+                "file": "courses/rest-api/combined-notes.md"
               }
             }
           }
@@ -158,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d3f390243ecdf9ab",
+  "active": "983cda1c37ccfa29",
   "lastOpenFiles": [
-    "notes/2024/05-MAY/03/MIDDAY.md",
-    "notes/2024/05-MAY/02/MIDDAY.md",
-    "notes/2024/04-APR/30/MIDDAY.md",
-    "courses/block-editor/1.0.0-introduction.md",
-    "courses/block-editor/1.7.0-nested-blocks.md",
-    "notes/2024/04-APR/29/MIDDAY.md",
-    "courses/block-editor/1.6.0-block-controls.md",
-    "courses/block-editor/1.5.0-block-attributes-and-editable-fields.md",
-    "courses/block-editor/1.4.0-block-supports.md",
-    "courses/block-editor/1.3.0-creating-dynamic-blocks.md",
-    "courses/block-editor/1.8.0-block-api-reference.md",
-    "notes/2024/04-APR/26/MIDDAY.md",
-    "courses/block-editor/2.5.0-slotfills.md",
-    "courses/block-editor/2.3.0-notices.md",
+    "revision/qna-questions/basic-theme-development.md",
+    "revision/qna-questions/basic-wp-plugin.md",
+    "revision/qna-questions/complete-wp.md",
+    "revision/qna-questions/engineering-basics.md",
+    "revision/qna-questions",
+    "notes/2024/05-MAY/10/STANDUP.md",
+    "notes/2024/05-MAY/13/MIDDAY.md",
+    "courses/full-site-editing/1.3-theme-blocks.md",
+    "courses/full-site-editing/1.2-site-editor.md",
+    "courses/full-site-editing/1.1-introduction-to-fse.md",
+    "courses/full-site-editing/2.1-block-theme-setup.md",
+    "courses/rest-api/combined-notes.md",
+    "courses/rest-api/03-CODEBASE-REVIEW.md",
+    "courses/rest-api/02-USING_REST_API.md",
+    "courses/rest-api/01-INTRODUCTION.md",
+    "assignment/cvw assignment.md",
+    "courses/core-web-vitals/1.5-largest-contentful-paint-(lcp).md",
+    "courses/full-site-editing/2.2-template-and-template-parts.md",
+    "courses/core-web-vitals/1.4-first-input-delay-(fid).md",
+    "notes/2024/05-MAY/13/STANDUP.md",
+    "courses/basic-wordpress-plugin-development.md/1.1.2-plugin-security.md",
+    "notes/2024/05-MAY/13",
+    "courses/basic-wordpress-plugin-development.md/1.1.1-plugin-development-introduction.md",
+    "revision/introduction-to-wp/1.0.md",
+    "Screenshot 2024-05-11 at 11.32.28 AM.png",
+    "Screenshot 2024-05-11 at 11.32.12 AM.png",
+    "Screenshot 2024-05-11 at 11.31.56 AM.png",
+    "revision/introduction-to-wp/Screenshot 2024-05-11 at 11.30.11 AM.png",
+    "revision/introduction-to-wp/Screenshot 2024-05-11 at 11.31.53 AM.png",
+    "revision/introduction-to-wp/Screenshot 2024-05-11 at 11.31.47 AM.png",
+    "revision/introduction-to-wp/Screenshot 2024-05-11 at 11.31.30 AM.png",
+    "revision/introduction-to-wp/Screenshot 2024-05-11 at 11.31.15 AM.png",
+    "revision/introduction-to-wp/Pasted image 20240511112412.png",
+    "revision/introduction-to-wp",
+    "revision/Untitled.md",
+    "revision",
+    "courses/core-web-vitals/1.6-cumilative-layout-shifts-(cls).md",
+    "notes/2024/05-MAY/10/MIDDAY.md",
+    "Untitled.md",
+    "courses/full-site-editing",
+    "notes/2024/05-MAY/10",
+    "courses/core-web-vitals",
+    "notes/2024/05-MAY/09",
+    "notes/2024/05-MAY/08",
+    "notes/2024/05-MAY/07",
     "Pasted image 20240506231716.png",
-    "Pasted image 20240506231355.png",
-    "courses/block-editor/2.1.0-meta-boxes.md",
-    "courses/block-editor/1.2.0-basic-(static)-block.md",
-    "courses/block-editor/1.1.0-creating-a-block.md",
-    "notes/2024/05-MAY/06/MIDDAY.md",
-    "[3.0-creating-dynamic-blocks.md",
-    "courses/block-editor/assets/Pasted image 20240506195713.png",
-    "notes/2024/05-MAY/03/STANDUP.md",
-    "notes/2024/04-APR/25/MIDDAY.md",
-    "notes/2024/04-APR/24/MIDDAY.md",
-    "notes/2024/04-APR/23/MIDDAY.md",
-    "notes/2024/05-MAY/06/STANDUP.md",
-    "assignment/block-editor-21/commits.md",
-    "notes/2024/05-MAY/06",
-    "assignment/block-editor-21",
-    "notes/2024/05-MAY/02/STANDUP.md",
-    "notes/2024/05-MAY/03",
-    "notes/2024/05-MAY/02",
-    "notes/2024/05-MAY",
-    "courses/block-editor/udemy",
-    "notes/2024/04-APR/30",
-    "notes/2024/04-APR/29",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.31.46 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.27.48 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.26.30 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.24.07 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.23.48 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.19.58 PM.png",
-    "notes/2024/04-APR/26/Screenshot 2024-04-26 at 6.18.12 PM.png",
-    "courses/block-editor/assets",
-    "notes/2024/04-APR/26",
     "Untitled.canvas"
   ]
 }

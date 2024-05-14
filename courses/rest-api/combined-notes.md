@@ -177,3 +177,27 @@ In addition to the pagination query parameters detailed above, several other par
 	1. There's a function called `rest_get_url_prefix()` this will return the prefix, the default is `wp-json`. And if you want to update the prefix then just use the filter `rest_url_prefix` to update it.
 	2. BTW, the rewrite rules are added so that later the requests can be resolved.
 4. Then it calls the `create_initial_rest_routes()`
+
+## Codebase Overview Pt 2 
+1. `rest_api_loaded()` is a function called in `wp-includes/default-filters.php` to action `parse_request`. The rule tries to match with the default `rest_url_prefix` or whatever you added. Once the `rest_route` is matched you can access the query using `$wp->query-vars->rest_route`. Basically if this variable is empty then its not a rest request. And this is the one which executes your request.
+2. You can set custom REST URL prefix instead of `wp-json` with the filter `rest_url_prefix`.
+3. REST request can be also made within the codebase, functions like `rest_do_request` it will figure out the host and all.
+4. You can also use your custom server class using the filter `wp_rest_server_class`.
+5. In order to make sure the response is an instance of `WP_REST_Response` class you can use `rest_ensure_respone()` to do so.
+
+## REST API - Execution Flow - Request
+1. We use the function `$server->serve($route)` and the `$route` is nothing but the variable from `$wp->query->rest_route`. 
+2. Let's look into the `server` function
+	1. First it check if current user is logged in or not.
+	2. Then it applies the filter to enable the `_JSONP`, the filter is `rest_jsonp_enabled`, default to `true`.
+	3. Then it sets the basic headers like those `X-WP-*`, `Content-Type` etc.
+	4. You can use the filter `rest_expose_cors_headers` to modify the headers.
+	5. You can use the filter `rest_allowed_cors_headers` to modify the allowed headers.
+	6. You can use the `rest_authentication_error` filter to restrict the access to the API. (Applied in `check_authentication()` function in the `WP_REST_Server` class)
+	7. The next step is to create a `WP_REST_Request` this class will be used to represent the request.
+	8. Once these things are done, we call the `dispatch` method, which matches the request to the callback and calls the function. 
+		1. Use filter `rest_pre_dispatch` to filter the pre-calculated result of the request.
+
+## REST API - Execution Flow - Response
+1. In the dispatch function, once it's done, we will return the response.
+2. 
