@@ -128,6 +128,8 @@ $http_code  = wp_remote_retrieve_response_code( $response );
 
     Questions:
     1. What if the wp_remote_retrive_ function is provided with a `WP_Error` object?
+	    Answer is: We need to use the `is_wp_error()` function.
+
 
 ### POSTing Data
 1. The functions we will be using is [`wp_remote_post()`](https://developer.wordpress.org/reference/functions/wp_remote_post/)
@@ -222,6 +224,47 @@ $args     = array(
 $response = wp_remote_request( 'http://some-api.com/object/to/delete', $args );
 ```
 
+## Internal Source Code
+1. While the request may be sent by these above mentioned wrapper functions, internally they are called by the `WP_HTTP::request()` method.
+2. While the `WP_HTTP::request()` method processes the request, we can still modify few things in the execution with some filters, here's a list of those
+	1. There are filters for updating things like `http_request_timeout`, `http_request_redirection_count` etc. you can check those in the source code.
+	2. The important one for us is the `pre_http_request`, and `http_response`
+```php
+	/**
+	 * Filters the preemptive return value of an HTTP request.
+	 *
+	 * Returning a non-false value from the filter will short-circuit the HTTP request and return
+	 * early with that value. A filter should return one of:
+	 *
+	 *  - An array containing 'headers', 'body', 'response', 'cookies', and 'filename' elements
+	 *  - A WP_Error instance
+	 *  - boolean false to avoid short-circuiting the response
+	 *
+	 * Returning any other value may result in unexpected behavior.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @param false|array|WP_Error $response    A preemptive return value of an HTTP request. Default false.
+	 * @param array                $parsed_args HTTP request arguments.
+	 * @param string               $url         The request URL.
+	 */
+	$pre = apply_filters( 'pre_http_request', false, $parsed_args, $url );
+```
+
+```php
+	/**
+	 * Filters a successful HTTP API response immediately before the response is returned.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @param array  $response    HTTP response.
+	 * @param array  $parsed_args HTTP request arguments.
+	 * @param string $url         The request URL.
+	 */
+	return apply_filters( 'http_response', $response, $parsed_args, $url );
+}
+```
+
 ### Performance
 1. Use of caching @see [Transient API](https://developer.wordpress.org/apis/transients/).
 2. Use of `HEAD` request to make sure the server resource is always available.
@@ -237,6 +280,7 @@ The other helper functions deal with retrieving different parts of the response.
 ## Introduction To Caching
 - Caching is a practice whereby commonly used objects or objects requiring significant time to build are saved into a fast object store for quick retrieval on later requests.
 - You should always **cache**.
+
 
 ### WordPress Transient
 1. WordPress Transients provide a convenient way to store and use cached objects.
@@ -319,4 +363,4 @@ function set_transient($transient, $value, $expiration = 0) {
     - `do_action( "delete_transient_{$transient}", $transient );`
     - `do_action( 'deleted_transient', $transient );`
 
-
+There is a cron event called `delete_expired_transients` which runs everyday and cleans up all the expired transient.

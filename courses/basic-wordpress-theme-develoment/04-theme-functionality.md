@@ -2,7 +2,7 @@
 
 ## Video: [Theme Functionality Overview](https://www.youtube.com/watch?v=D6nb0sQiLqE)
 1. So we are talking about the `functions.php` file. We will be refering to the **twenty twenty one** theme.
-2. We can add multiple theme support. This should be added to `after_theme_support` action. (called in `wp-settings.php` file). 
+2. We can add multiple theme support. This should be added to `after_setup_theme` action. (called in `wp-settings.php` file). 
 3. Let's talk about the activation, so a the activation we are calling the `wp_get_active_and_valid_themes()` funcion. So in that the `TEMPLATEPATH` will be referred as parent theme and `STYLESHEET` constant will be reffered as the child theme.
 4. The `get_template()` function returns the name of active theme, it fetches the name from **options** table, stored under the key `template` and `autoload` set to `yes`.
 5. The `get_stylesheet()` function will return the current stylesheet, which pretty much fetches again from the options table, under the key `stylesheet` and `autoload` set to `yes`. (Both functions are in `theme.php` file)

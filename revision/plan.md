@@ -1,0 +1,114 @@
+- [ ] **Engineering Basics**
+	- [x] CSS
+		- [x] Selectors & Combinators
+	- [ ] JS Basics From MDN Web Docs
+	- [x] Learn PHP
+		- [x] Super Globals
+		- [x] Functions definition.
+	- [x] Sessions, Cookies
+	- [ ] DNS Lookup flow
+	- [ ] Linux Commands
+		- [ ] Process related commands
+		- [ ] Directory operations
+- [ ] **Introduction To WordPress**
+- [ ] **Basics Of WordPress Plugin Development**
+	- [x] Hooks & Filters
+	- [x] CPT & Taxonomy
+		- [x] Shadow Taxonomy
+	- [x] `WP_Query`
+	- [x] Meta API
+	- [x] Short codes API
+		- [x] Nested short codes
+	- [ ] Settings & Options API
+	- [x] Administration Menus
+		- [x] Adding menus to existing menus
+	- [ ] Security APIs
+- [x] **REST API**
+	- [x] Related hooks
+	- [x] Code in `rest-api`, `rest_api_init`
+	- [x] Admin AJAX
+- [x] **WP CLI**
+	- [x] Explore built in commands
+		- [x] Scaffold
+		- [x] CRON Job Commands
+		- [x] Export data commands
+		- [x] SQL operations command
+		- [x] User Management
+	- [x] Creating custom commands
+		- [x] Documentation Of Commands
+		- [x] Adding optional arguments
+- [ ] **Advance WordPress Plugin Development**
+	- [ ] HTTP API
+	- [ ] Transient API
+	- [ ] Dashboard Widgets API
+	- [ ] Basic Overview Of
+		- [ ] File Header API
+		- [ ] XML RPC
+	- [ ] WP Admin AJAX
+		- [ ] Files Used
+		- [ ] Hooks
+	- [ ] Rewrite API
+	- [ ] User Roles
+		- [ ] Creating Custom User Roles
+		- [ ] Adding capabilities
+		- [ ] Creating new users programatically
+		- [ ] CRON API
+			- [ ] Cron Schedules
+	- [ ] WordPress Database Schema
+		- [ ] Creating Custom Tables
+		- [ ] MU Plugins
+	- [ ] Action Scheduler
+	- [ ] `wp_mail()`
+	- [ ] Drop Ins
+	- [ ] Object Caching
+		- [ ] Utilisation of `db.php`
+		- [ ] Multisite Drop-ins
+- [ ] **Basic WordPress Theme Development**
+	- [ ] Anatomy Of Theme
+	- [ ] Necessary files
+	- [ ] Theme Functionality
+		- [ ] Custom Headers
+		- [ ] Widgets
+	- [ ] Theme Basics
+		- [ ] Loop
+		- [ ] Enqueuing Scripts
+		- [ ] `get_*()` functions
+	- [ ] Template Hierarchy
+		- [ ] How WP decides which templates to show ?
+	- [ ] Child Themes
+	- [ ] Conditional, Template Tags
+	- [ ] Handling Media
+- [ ] **Advance WordPress Theme Development**
+	- [ ] Customiser API
+		- [ ] Sections, Panels, Settings, Controls
+		- [ ] transport methods
+	- [ ] Webpack, Babel
+	- [ ] WP Core
+	- [ ] Accessibility
+		- [ ] `wp_a11y` function
+	- [ ] Translations
+		- [ ] Internal Working
+		- [ ] Files Required
+		- [ ] How to generate the files
+- [ ] **Basic React JS**
+	- [ ] JSX
+	- [ ] Virtual DOM
+		- [ ] Diffing
+	- [ ] States & Lifecycle
+	- [ ] Functional, Class Components
+		- [ ] Which one is better ?
+	- [ ] Hooks
+		- [ ] useState
+		- [ ] useEffect
+		- [ ] useCallback
+		- [ ] useMemo
+	- [ ] Lifting Up State
+	- [ ] Context API
+- [ ] **Block Editor**
+	- [ ] Static & Dynamic Blocks
+	- [ ] `InspectControl`, `BlockControl`
+	- [ ] `useSelect`
+	- [ ] Block Supports
+	- [ ] 
+
+
