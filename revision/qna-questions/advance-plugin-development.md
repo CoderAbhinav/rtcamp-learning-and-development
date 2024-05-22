@@ -32,4 +32,3 @@
 26. What are **drop ins** ?
 27. When does drop ins are loaded ? (Before mu plugins)
 28. What is `object-cache.php` **drop in** ?
-29. 
