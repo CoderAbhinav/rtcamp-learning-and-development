@@ -1,8 +1,40 @@
 # Attempt #1
 ## 1. Can a script & style have a same handle ? Is it possible ? What happens if we do so ?
 1. If you try to register or enqueue an already registered handle with different parameters, the new parameters will be ignored. Instead, use [wp_deregister_script()](https://developer.wordpress.org/reference/functions/wp_deregister_script/ "Function Reference/wp deregister script") and register the script again with the new parameters. ([Ref](https://developer.wordpress.org/reference/functions/wp_enqueue_script/#notes))
+--- 
+*Additional Information*
+1. The `$wp_scripts`, `$wp_styles` are an instance of `WP_Dependencies` class.
+2. Also you can have same handle name for a script, and a style at the same time. `wp_enqueue_script('handle1', .... )` and `wp_enqueue_style('handle1', .... )` is valid in the same code, and will enqueue separate
+```php
+wp_enqueue_script( 'handle-1', plugin_dir_url(__FILE__ ) . 'scripts/my-script.js', array(), '1.0.0' );
+
+wp_enqueue_style( 'handle-1', plugin_dir_url(__FILE__ ) . 'scripts/my-style.css', array(), '1.0.0' );
+```
+3. If any of the dependancies mentioned in the `deps` argument is not present WordPress will not load the remaining scripts.
+4. The `wp_enqueue_script` is fired from `wp-includes/script-loader.php`. And it fires after the `init` hook.
+5. There might be a case where the dependancy is enqueued in the footer, and the current script is not in this case WordPress will try to find the most optimal way and will place both the scripts in footer or header.`
+---
 ## 2. Which libraries are used for image manipulation in WordPress ?
 `ImageMagic` & `GD` libraries are used in WordPress for image manipulations ([Ref](https://support.pagely.com/hc/en-us/articles/115000052451-Imagick-vs-GD-in-WordPress))
+
+---
+*Additional Information*
+The PHP extensions listed below are _highly recommended_ in order to allow WordPress to operate optimally and to maximise compatibility with many popular plugins and themes.
+
+- [curl](https://www.php.net/manual/en/book.curl.php) (PHP >= 7.3 requires libcurl >= 7.15.5; PHP >= 8.0 requires libcurl >= 7.29.0) – Performs remote request operations.
+- [dom](https://www.php.net/manual/en/book.dom.php) (requires libxml) – Used to validate Text Widget content and to automatically configure IIS7+.
+- [exif](https://www.php.net/manual/en/book.exif.php) (requires php-mbstring) – Works with metadata stored in images.
+- [fileinfo](https://www.php.net/manual/en/book.fileinfo.php) (bundled in PHP) – Used to detect mimetype of file uploads.
+- [hash](https://www.php.net/manual/en/book.hash.php) (bundled in PHP >=5.1.2) – Used for hashing, including passwords and update packages.
+- [igbinary](https://www.php.net/manual/en/book.igbinary.php) – Increases performance as a drop in replacement for the standard PHP serializer.
+- [imagick](https://www.php.net/manual/en/book.imagick.php) (requires ImageMagick >= 6.2.4) – Provides better image quality for media uploads. See [WP_Image_Editor](https://developer.wordpress.org/reference/classes/wp_image_editor/) for details. Smarter image resizing (for smaller images) and PDF thumbnail support, when Ghost Script is also available.
+- [intl](https://www.php.net/manual/en/book.intl.php) (PHP >= 7.4.0 requires ICU >= 50.1) – Enable to perform locale-aware operations including but not limited to formatting, transliteration, encoding conversion, calendar operations, conformant collation, locating text boundaries and working with locale identifiers, timezones and graphemes.
+- [mbstring](https://www.php.net/manual/en/book.mbstring.php) – Used to properly handle UTF8 text.
+- [openssl](https://www.php.net/manual/en/book.openssl.php) (PHP 7.1-8.0 requires OpenSSL >= 1.0.1 / < 3.0; PHP >= 8.1 requires OpenSSL >= 1.0.2 / < 4.0) – SSL-based connections to other hosts.
+- [pcre](https://www.php.net/manual/en/book.pcre.php) (bundled in PHP >= 7.0 recommended PCRE 8.10) – Increases performance of pattern matching in code searches.
+- [xml](https://www.php.net/manual/en/book.xml.php) (requires libxml) – Used for XML parsing, such as from a third-party site.
+- [zip](https://www.php.net/manual/en/book.zip.php) (requires libzip >= 0.11; recommended libzip >= 1.6) – Used for decompressing Plugins, Themes, and WordPress update packages.
+---
 ## 3. What are attributes, block toolbars, and block controls ? Can block controls have additional settings ? Where it can be added ?
 ### Attributes
 1. Block attributes provide information about the data stored by a block. For example, rich content, a list of image URLs, a background colour, or a button title.
@@ -20,6 +52,12 @@
 1. When the user selects a block, a number of control buttons may be shown in a toolbar above the selected block
 2. If the return value of your block type’s `Edit` function includes a `BlockControls` element, those controls will be shown in the selected block’s toolbar.
 3. The Settings Sidebar is used to display less-often-used settings or those that require more screen space. The Settings Sidebar should be used for **block-level settings only** and is shown when a block is selected.
+
+----
+*Additional Information*
+We use the `<InspectControl>` component to add different settings in the *settings sidebar*.
+
+----
 
 ## 4. How can we make REST API endpoint call from Gutenberg Blocks ? How it works ? Details of `apiFetch`.
 1. The `@wordpress/api-fetch` is utility to make WordPress REST API requests. It’s a wrapper around `window.fetch`.
@@ -43,6 +81,23 @@
 	} );
 	```
 
+---
+*Additional Information*
+```js
+apiFetch({
+	path: "", // Shorthand to be used in place of `url`, appended to the REST API root URL for the current site.
+	url: "", // Absolute URL to the endpoint from which to fetch.
+	parse: true, // return value of `apiFetch` will resolve to the parsed JSON result.
+	data: {}, // Sent only when it's a PUT or POST request
+	
+})
+```
+
+1. Another way of accessing the WordPress site data is [`@wordpress/core-data`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/#addentities) library.
+	1. The `useSelect` hook can be used to retrieve props from registered selector 
+	2. The `select('core').get**` function can be used inside the `useSelect` to retrieve the data, and interact with WP core data.
+
+---
 ## 5. Can I change the archive page query ? If yes then how ?
 1. **Yes**, With WP’s [pre_get_posts](https://developer.wordpress.org/reference/hooks/pre_get_posts/) hook, it is easy to modify existing WP archive queries. The hook fires after the query variable object is created, but before the actual query is run, making it possible to change any existing query argument, or inject new ones.
 	```php
@@ -82,6 +137,30 @@ This means that data stored in the cache resides in memory only and only for the
 2. The Object Cache can be replaced by other caching mechanisms by placing files in the `wp-content` folder which is looked at in `wp-settings`. If that file exists, then this file will not be included. (For instance the `redis` drop ins)
 3. By default, the object cache is **non-persistent**. ([Ref](https://developer.wordpress.org/reference/classes/wp_object_cache/))
 4. *Additional*: Use the [Transients API](https://developer.wordpress.org/apis/handbook/transients/ "Transients API") instead of these functions if you need to guarantee that your data will be cached. If persistent caching is configured, then the transients functions will use the wp_cache_* functions described in this document. However if persistent caching has not been enabled, then the data will instead be cached to the options table.
+---
+*Additional Information*
+1. The `WP_Object_Cache` class has been designed so that there will be less database trips overall. 
+2. The global `WP_Object_Cache` class is instantiated in the core WordPress load.
+
+The **WP_CACHE** setting, if true, includes the `wp-content/advanced-cache.php` script, when executing `wp-settings.php`.
+
+```
+define( 'WP_CACHE', true );
+```
+
+Disable cron entirely by setting DISABLE_WP_CRON to true.
+
+```
+define( 'DISABLE_WP_CRON', true );
+```
+
+Make sure a cron process cannot run more than once every WP_CRON_LOCK_TIMEOUT seconds.
+
+```
+define( 'WP_CRON_LOCK_TIMEOUT', 60 );
+```
+
+---
 ## 8. What are `wp-config.php` constants you came across till now?
 ```php
 /** The name of the database for WordPress */
@@ -132,7 +211,29 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
 if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', false );
 }
+
+// Enable Debug logging to the /wp-content/debug.log file
+define( 'WP_DEBUG_LOG', true );
+
+// Disable display of errors and warnings
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
+
+// Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+define( 'SCRIPT_DEBUG', true );
 ```
+
+----
+*Additional Information*
+1. `WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the “debug” mode throughout WordPress.
+2. Enabling `WP_DEBUG` will cause all PHP errors, notices, and warnings to be displayed.
+3. If it is necessary to log non-error information for debugging purposes, PHP does offer the `error_log` function for this purpose.
+4. **Deprecated Functions & Arguments**: Enabling `WP_DEBUG` will also cause notices about deprecated functions and arguments within WordPress that are being used on your site.
+5. `WP_DEBUG_LOG` is a companion to WP_DEBUG that causes all errors to also be saved to a `debug.log` log file.
+6. `WP_DEBUG_DISPLAY` is another companion to `WP_DEBUG` that controls whether debug messages are shown inside the HTML of pages or not.
+7. `SCRIPT_DEBUG` is a related constant that will force WordPress to use the “dev” versions of core CSS and JavaScript files rather than the minified versions that are normally loaded.
+8. The `SAVEQUERIES` definition saves the database queries to an array, and that array can be displayed to help analyse those queries.
+----
 ## 9. There are two ways we get posts from the database, (a) `get_posts`, (b) `WP_Query`, what's the difference between these two ?
 ### 1. What do these functions return ?
 1. The [`get_posts()`](https://developer.wordpress.org/reference/functions/get_posts/) retrieves an array of the latest posts, or posts matching the given criteria.
@@ -142,6 +243,7 @@ While `get_posts()` itself doesn't directly support template tags, you can us
 ### 3. What's the major difference ?
 1. The `get_posts()` is primarily used for fetching an array of posts, while `WP_Query` offers a more comprehensive approach for building custom loops, pagination, conditional logic, and finer control over the query.
 2. There might be a slight performance advantage with `get_posts()` in some scenarios, especially when dealing with very large numbers of posts, as `WP_Query` performs additional calculations.
+3. One important thing is we don't use a loop when we use `get_posts()`, while with WP_Query we need to use loop in order to retrieve all the data.
 ### 4. Which one is more flexible ?
 **`WP_Query`** is the clear winner in terms of flexibility. It empowers you to create more complex and dynamic post queries, integrate with themes and plugins seamlessly, and manage pagination effectively.
 ## 10. Difference between `is_single()` and `is_singular()`.
@@ -185,6 +287,26 @@ While `get_posts()` itself doesn't directly support template tags, you can us
 	};
 	```
 
+---
+*Additional Information*
+1. `API Version`: [Checkout this](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-api-versions/)
+2. `attributes`: Block attributes provide information about the data stored by a block. For example, rich content, a list of image URLs, a background colour, or a button title.
+3. `context`: Block context is a feature which enables ancestor blocks to provide values which can be consumed by descendent blocks within its own hierarchy.
+	```js
+	{
+		providesContext: {
+	        'my-plugin/recordId': 'recordId',
+	    },
+	}
+	```
+	
+4. `deprecation`:  When updating static blocks markup and attributes, block authors need to consider existing posts using the old versions of their block.
+	1. Do not deprecate the block and create a new one (a different name)
+	2. Provide a “deprecated” version of the block allowing users opening these in the block editor to edit them using the updated block.
+	3. Use the `deprecated` property, inside that add the things lets say all the deprecated attributes under the `attributes` key, supports under the `supports` key and so on.
+
+----
+
 ## 14. Which constants are defined for the CRON Execution & for the AJAX request ?
 2. For *CRON*, we use `DOING_CRON` ([Ref](https://developer.wordpress.org/reference/functions/wp_doing_cron/))
 3. For *AJAX*, we use `DOING_AJAX` ([Ref](https://developer.wordpress.org/reference/functions/wp_doing_ajax/))
@@ -222,3 +344,25 @@ The `$wp_actions` & `$wp_filters` variables stores the information about how man
 	```
 
 
+# Food
+## Basic Plugin Development
+### Hooks & Filters
+1. There is **no Limit** to priority value, you can provide a negative priority to the function, it will still function normally. For example, for a given hook if one function is added at priority -100, another at priority >= 0, in this case the function with priority -100 will run first and then the 0 priority function.
+2. We can use `add_filter` function instead of `add_action` function as the `add_action` function internally utilises the `add_filter`.
+3. If you add the same function twice with the same priority then it will execute only once, if you want to execute same function on the give hook more that once then set different priorities in order to do so.
+4. The `$wp_actions['hook_name']` or `did_action('hook_name')` can be used to get number of times a hook is executed, similarly for `$wp_filters['hook_name']` or `did_filter('hook_name')` can be used in the case of filters.
+### Custom Post Types, Taxonomies & Meta
+1. To register a post type `register_post_type` function is used.
+2. You can use `get_post_types()` function to get all the post types registered.
+3. We can use `post_type_exists('post_type')` in order to check if certain post type exists or not.
+4. We can unregister a post type using the function `unregister_post_type('post_type')`.
+5. You can use `apply_filters( 'register_post_type_args', $args, $post_type)` filter to change the arguments of already registered post types.
+6. The meta with `_*` keys are called private or hidden meta fields.
+
+### APIs
+1. The *meta API* can be used to access the metadata, there are functions like `get_metadata`, `update_metadata`, `delete_metadata` which can be leveraged for any object metadata.
+	1. There are functions specific to few objects like `get_post_meta`, `update_post_meta`, `add_post_meta`, `delete_post_meta` etc.
+	2. In order to add a custom *meta-box* to a screen use the function `add_meta_box` with the hook `add_meta_boxes`.
+2. 
+
+### WP CLI

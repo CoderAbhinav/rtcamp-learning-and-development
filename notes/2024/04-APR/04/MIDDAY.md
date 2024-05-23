@@ -1,9 +1,10 @@
 ## 1. Can we create a child theme of the existing child theme?
-Yes, it is possible to create a child theme of an existing child theme.
+No, it's not possible to create child theme of existing child theme.
 
 ## 2. What will happen if the Parent theme gets deleted?
 1. If the parent theme gets deleted, the child theme will lose its parent theme reference. In this case, the child theme will still be active, but it will behave as if it's a standalone theme without any parent theme. 
-2. Any functionality or styling inherited from the parent theme will no longer be available.
+2. Nope, this will result in an error message in the bottom left, and soon WordPress will activate the next working theme.
+3. Any functionality or styling inherited from the parent theme will no longer be available.
 
 ## 3. What is the difference between a child theme and a parent theme in WordPress?
 1. A parent theme is the main theme that provides the basic functionality, structure, and styling for a WordPress site.
